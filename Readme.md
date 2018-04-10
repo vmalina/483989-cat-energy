@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Наталья](https://up.htmlacademy.ru/adaptive/14/user/483989).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгений Котов](https://up.htmlacademy.ru/adaptive/14/user/25083).
 
 ---
 
