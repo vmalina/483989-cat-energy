@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи. Подбор программы</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="inner-page">
 
     <h1 class="visually-hidden">Подбор программы Cat Energy</h1>
 
@@ -21,9 +22,8 @@
       <div class="header__wrapper">
         <!-- Окончательный вид логотипа прояснится после того, как выдадут остальные макеты -->
         <div class="header__logo logo">
-          <a class="logo__link" href="index.html" title="Логотип Cat Energy">
-            <img class="logo__image" src="http://placehold.it/150x100" width="33" height="38" alt="Cat Energy" title="Логотип Cat Energy">
-            <img class="logo__text" src="http://placehold.it/150x100" width="101" height="18" alt="Cat Energy" title="Cat Energy">
+          <a class="logo__link" title="Логотип Cat Energy">
+            <img class="logo__image" src="img/logo-mobile.svg" width="190" height="38" alt="Cat Energy" title="Логотип Cat Energy">
           </a>
         </div>
         <button class="header__toggle header__toggle--hidden" type="button" title="Открыть меню"><span class="visually-hidden">Открыть меню</span></button>
@@ -33,9 +33,9 @@
 
     <form class="form" action="https://echo.htmlacademy.ru" method="post">
       <h2 class="form__title">Подбор программы</h2>
-       <!-- Странные плейсхолдеры какие-то...  -->
+      <!-- Странные плейсхолдеры какие-то...  -->
       <fieldset class="form__fieldset">
-        <legend class="form__legend form__legend--normal"></legend>
+        <h3 class="form__legend form__legend--normal">Заполните анкету и мы подберем программу питания для вашего кота</h3>
         <div class="form__field field field--required">
           <label class="field__label" for="id-cat-name">Имя:</label>
           <input class="field__input field__input--simple" type="text" id="id-cat-name" name="cat-name"  placeholder="Барсик" title="Имя кота:" required>
@@ -52,25 +52,25 @@
 
 
       <fieldset class="form__fieldset form__fieldset--bordered">
-        <legend class="form__legend visually-hidden">Программа:</legend>
+        <h3 class="form__legend visually-hidden">Программа:</h3>
         <ul class="form__options">
           <li class="form__option option">
-            <input class="option__radio visually-hidden" type="radio" id="id-radio-1" name="program" value="losing" title="Похудение" checked>
+            <input class="option__control option__control--radio visually-hidden" type="radio" id="id-radio-1" name="program" value="losing" title="Похудение" checked>
             <label class="option__label" for="id-radio-1">Похудение</label>
           </li>
           <li class="form__option option">
-            <input class="option__radio visually-hidden" type="radio" id="id-radio-2" name="program" value="gathering" title="Набор массы">
-            <label  class="option__label" for="id-radio-2">Набор массы"</label>
+            <input class="option__control option__control--radio visually-hidden" type="radio" id="id-radio-2" name="program" value="gathering" title="Набор массы">
+            <label  class="option__label" for="id-radio-2">Набор массы</label>
           </li>
           <li class="form__option option">
-            <input class="option__radio visually-hidden" type="radio" id="id-radio-3" name="program" value="dontknow" title="Не знаю (нужен Ваш совет)">
-            <label class="option__label" for="id-radio-3">Не знаю (нужен Ваш совет)"</label>
+            <input class="option__control option__control--radio visually-hidden" type="radio" id="id-radio-3" name="program" value="dontknow" title="Не знаю (нужен Ваш совет)">
+            <label class="option__label" for="id-radio-3">Не знаю (нужен Ваш совет)</label>
           </li>
         </ul>
       </fieldset>
 
       <fieldset class="form__fieldset">
-        <legend class="form__legend form__legend--accented">Контактые данные (владельца кота)</legend>
+        <h3 class="form__legend  form__legend--accented">Контактые данные <br>(владельца кота)</h3>
         <div class="form__field field field--required">
           <label class="field__label" for="id-email">Имя:</label>
           <input class="field__input field__input--iconed field__input--email-iconed" type="email" id="id-email" name="email" placeholder="kuklachev@gmail.com" title="Введите Ваш e-mail:" required>
@@ -82,29 +82,31 @@
       </fieldset>
 
 
-      <fieldset class="form__fieldset">
-        <legend class="form__legend form__legend--accented">Комментарий</legend>
-        <textarea class="form__textarea" id="id-comment" name="comment"></textarea>
-      </fieldset>
+      <div class="form__fieldset">
+        <label class="form__legend form__legend--accented" for="id-comment">Комментарий</label>
+        <div class="form__field field">
+          <textarea class="field__input field__input--simple field__input--textarea" id="id-comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </div>
+      </div>
 
 
       <fieldset class="form__fieldset">
-        <legend class="form__legend form__legend--accented">Дополнительно</legend>
+        <h3 class="form__legend form__legend--accented">Дополнительно</h3>
         <ul class="form__options">
           <li class="form__option option">
-            <input class="option__checkbox visually-hidden" type="checkbox" id="id-check-1" name="sweetener" title="Сахарозаменитель" checked>
+            <input class="option__control option__control--checkbox visually-hidden" type="checkbox" id="id-check-1" name="sweetener" title="Сахарозаменитель" checked>
             <label class="option__label" for="id-check-1">Сахарозаменитель</label>
           </li>
           <li class="form__option option">
-            <input class="option__checkbox visually-hidden" type="checkbox" id="id-check-2" name="water" title="Питьевая вода">
+            <input class="option__control option__control--checkbox visually-hidden" type="checkbox" id="id-check-2" name="water" title="Питьевая вода">
             <label class="option__label" for="id-check-2">Питьевая вода</label>
           </li>
           <li class="form__option option">
-            <input  class="option__checkbox visually-hidden" type="checkbox" id="id-check-3" name="milk" title="Молоко">
+            <input  class="option__control option__control--checkbox visually-hidden" type="checkbox" id="id-check-3" name="milk" title="Молоко">
             <label class="option__label" for="id-check-3">Молоко</label>
           </li>
           <li class="form__option option">
-            <input class="option__checkbox visually-hidden" type="checkbox" id="id-check-4" name="vitamins" title="Витамины">
+            <input class="option__control option__control--checkbox visually-hidden" type="checkbox" id="id-check-4" name="vitamins" title="Витамины">
             <label class="option__label" for="id-check-4">Витамины</label>
           </li>
         </ul>
@@ -122,18 +124,18 @@
 
       <section class="footer__contacts contacts contacts--grey">
         <h2 class="visually-hidden">Адрес нашей компании</h2>
-        <p class="contacts__slogan">Приглашаем к сотрудничеству дилеров</p>
+        <p class="contacts__slogan">Приглашаем <br>к сотрудничеству дилеров!</p>
         <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </section>
 
       <section class="footer__map map">
         <h2 class="visually-hidden">Карта</h2>
-        <img class="map__image" src="http://placehold.it/300x400" width="320" height="400" alt="Наш адрес на карте: Санкт-Петербург, ул. б.Конюшенная, д.19/8" title="Наш адрес на карте: Санкт-Петербург, ул. б.Конюшенная, д.19/8">
+        <img class="map__image" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Наш адрес на карте: Санкт-Петербург, ул. б.Конюшенная, д.19/8" title="Наш адрес на карте: Санкт-Петербург, ул. б.Конюшенная, д.19/8">
       </section>
 
       <div class="footer__logo logo">
         <a class="logo__link"  href="index.html" title="Логотип Cat Energy (перейти на главную страницу)">
-          <img class="logo__text" src="http://placehold.it/150x100" width="128" height="24" alt="Cat Energy">
+          <img class="logo__text" src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
         </a>
       </div>
 
@@ -148,7 +150,7 @@
       <div class="footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Перейти на страницу интенсива 'Профессиональный HTML и CSS, уровень2'">HTML Academy</a>
         <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" title="Перейти на страницу интенсива 'Профессиональный HTML и CSS, уровень2'">
-          <img class="copyright__image" src="http://placehold.it/150x100" width="27" height="34" alt="HTML Academy" title="Логотип HTML Academy">
+          <img class="copyright__image" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy" title="Логотип HTML Academy">
         </a>
       </div>
 

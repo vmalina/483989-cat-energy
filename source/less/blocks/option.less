@@ -1,0 +1,73 @@
+.option {
+  position: relative;
+}
+
+.option:not(:last-of-type) {
+  margin-bottom: 12px;
+}
+
+.option__label {
+  display: inline-block;
+  margin-left: 40px;
+  padding: 8px 6px 4px;
+  vertical-align: baseline;
+  text-transform: uppercase;
+}
+
+.option__label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 0 0 1px @lightgrey;
+}
+
+.option__control--radio + .option__label::before {
+  border-radius: 50%;
+}
+
+.option__control:checked + .option__label::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 9px;
+}
+
+.option__control--radio:checked + .option__label::after {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: @basegreen;
+}
+
+.option__control--checkbox:checked + .option__label::after {
+  width: 12px;
+  height: 6px;
+  transform: rotate(-45deg);
+  border-bottom: 2px solid @basegreen;
+  border-left: 2px solid @basegreen;
+}
+
+.option__control:hover + .option__label::before,
+.option__control:active + .option__label::before {
+  box-shadow: 0 0 0 1px @middlegrey;
+}
+
+.option__control:active + .option__label {
+  opacity: 0.3;
+}
+
+.option__control:disabled + .option__label {
+  opacity: 0.2;
+}
+
+.option__control--radio:disabled + .option__label::after {
+  background-color: @middlegrey;
+}
+
+.option__control--checkbox:disabled + .option__label::after {
+  border-bottom: 2px solid @middlegrey;
+  border-left: 2px solid @middlegrey;
+}

@@ -1,0 +1,45 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.copyright__link {
+  font-family: @arialfont;
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+  color: @darkgrey;
+
+  &:hover,
+  &:focus {
+    color: @basegreen;
+  }
+
+  &:active {
+    color: @basegreen;
+    opacity: 0.3;
+  }
+}
+
+.copyright__logo {
+  opacity: 1;
+  //fill:@darkgrey;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    //fill:@basegreen;
+  }
+
+  &:active {
+    opacity: 0.3;
+    //fill:@basegreen;
+  }
+}
+
+.copyright__image {
+  display: block;
+}
