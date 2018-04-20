@@ -1,0 +1,65 @@
+.oswald-title() {
+  margin: 0;
+  padding: 0;
+  font-family: @oswaldfont;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+.oswald-title-small(@line: 16px) {
+  margin: 0;
+  padding: 0;
+  font-family: @oswaldfont;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: @line;
+  text-transform: uppercase;
+}
+
+.oswald-title-lined() {
+  display: flex;
+  margin-bottom: 30px;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: @oswaldfont;
+
+  &::after {
+    content: "";
+    align-self: flex-start;
+    width: 3px;
+    height: 3px;
+    margin-top: 14px;
+    margin-left: 24px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    background: @basegreen;
+  }
+}
+
+.top-line(@padding: 0) {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: @padding;
+    right: @padding;
+    width: auto;
+    height: 1px;
+    background-color: rgba(205, 205, 205, 0.5);
+  }
+}
+
+.bottom-line(@padding: 0) {
+  &::after {
+    content: "";
+    position: absolute;
+    left: @padding;
+    right: @padding;
+    bottom: 0;
+    width: auto;
+    height: 1px;
+    background-color: rgba(205, 205, 205, 0.5);
+  }
+}

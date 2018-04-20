@@ -1,0 +1,32 @@
+.slider {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.slider__image {
+  display: none;
+
+  &--visible {
+    display: block;
+  }
+}
+
+.slider__state {
+  font-family: @oswaldfont;
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

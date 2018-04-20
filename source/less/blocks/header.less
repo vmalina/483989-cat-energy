@@ -1,0 +1,37 @@
+// @import "logo.less";
+
+.header {
+  margin: 0;
+  padding: 0;
+}
+
+.header__wrapper {
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header__toggle {
+  background-color: transparent;
+  border: none;
+  width: 22px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+  &--hidden {
+    display: none;
+  }
+
+  &--close {
+    background-image: url("img/icon-close.svg");
+    background-size: 18px 18px;
+  }
+
+  &--burger {
+    background-image: url("img/icon-mobile-menu.svg");
+    background-size: 18px 18px;
+  }
+}

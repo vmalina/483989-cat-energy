@@ -1,0 +1,79 @@
+.btn {
+  display: block;
+  padding: 10px 10px 10px;
+  font-family: @oswaldfont;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: @standartsize;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  border: none;
+}
+
+.btn--green {
+  color: @basewhite;
+  background-color: @basegreen;
+
+  &:hover,
+  &:focus {
+    background-color: @hovergreen;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @hovergreen;
+  }
+}
+
+
+.btn--grey {
+  color: @darkgrey;
+  background-color: @basegrey;
+
+  &:hover,
+  &:focus {
+    background-color: @hovergrey;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+    background-color: @hovergreen;
+  }
+}
+
+.btn--arrowed {
+  position: relative;
+  padding-right: 60px;
+  padding-left: 0;
+  color: @baseblack;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 33px;
+    height: 100%;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::after {
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+    }
+  }
+}
