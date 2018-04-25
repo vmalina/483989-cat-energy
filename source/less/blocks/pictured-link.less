@@ -1,16 +1,22 @@
 .pictured-link {
   position: relative;
-  z-index: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
   width: 280px;
   min-height: 289px;
-  margin: 20px auto;
   padding: 40px;
   text-decoration: none;
-  background-color: @basegreen;
+  text-align: center;
+  background-color: @hovergreen;
+  font-family: @arialfont;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+  align-items: flex-end;
+  justify-content: center;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
 
   &:hover,
   &:focus {
@@ -20,40 +26,56 @@
   &:active {
     opacity: 0.6;
   }
-}
 
-.pictured-link__image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-image: url("../img/icon-gift.svg");
+  }
 }
 
 .pictured-link__text {
-  z-index: 2;
-  max-width: 70%;
-  margin: 0;
-  padding: 0;
-  padding-top: 120px;
-  font-family: @arialfont;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  color: @basewhite;
-  position: relative;
+  max-width: 150px;
+}
 
-  &--gift-iconed::before {
-    content: "";
-    position: absolute;
+@media (min-width: @tabletwidth) {
+  .pictured-link {
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .pictured-link::before {
+    right: auto;
+    left: 50px;
     top: 0;
-    left: 0;
+    bottom: 0;
+    width: 55px;
+    height: 100%;
+  }
+}
+
+@media (min-width: @desktopwidth) {
+  .pictured-link {
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .pictured-link::before {
     right: 0;
-    width: auto;
+    left: 0;
+    top: 50px;
+    bottom: auto;
+    width: 100%;
     height: 60px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url("../img/icon-gift.svg");
   }
 }

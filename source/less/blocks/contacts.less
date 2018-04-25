@@ -1,5 +1,10 @@
 .contacts {
   display: flex;
+  align-items: flex-start;
+  z-index: 2;
+  margin-top: 0;
+  padding: 0;
+  width: 100%;
 
   &--white {
     background-color: @basewhite;
@@ -8,6 +13,14 @@
   &--grey {
     background-color: @basegrey;
   }
+}
+
+.contacts__wrapper {
+  display: flex;
+  align-items: flex-start;
+  min-height: 114px;
+  position: relative;
+  z-index: 3;
 }
 
 .contacts__slogan {
@@ -19,14 +32,52 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  align-self: center; /*Для ИЕ*/
 }
 
 .contacts__address {
   width: 50%;
   margin: 0;
+  margin-left: auto;
   padding: 0;
   font-family: @arialfont;
   font-size: 14px;
   line-height: 20px;
   color: @darkgrey;
+  align-self: center; /*Для ИЕ*/
+}
+
+.contacts__map {
+  min-height: 364px;
+  z-index: 1;
+}
+
+@media (min-width: @tabletwidth) {
+  .contacts__slogan {
+    max-width: 155px;
+    text-align: left;
+  }
+
+  .contacts__address {
+    max-width: 155px;
+    text-align: left;
+  }
+
+  .contacts__wrapper {
+    width: 100%;
+    padding: 40px;
+    background-color: inherit;
+  }
+}
+
+@media (min-width: @desktopwidth) {
+  .contacts {
+    background-color: transparent;
+  }
+
+  .contacts__wrapper {
+    max-width: 450px;
+    background-color: @basewhite;
+    padding: 40px;
+  }
 }

@@ -1,22 +1,28 @@
-.programs {
-  margin: 0;
-  padding: 20px;
-}
-
-.programs__link {
-  font-size: 14px;
-  line-height: 18px;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
 .programs__list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-
 .programs__list-item:not(:last-of-type) {
   margin-bottom: 20px;
+}
+
+@media (min-width: @desktopwidth) {
+  .programs__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  .programs__list-item:not(:last-of-type) {
+    margin-bottom: 0;
+  }
+
+
+  .programs__list-item:nth-of-type(n+3) {
+    margin-top: 20px;
+  }
 }

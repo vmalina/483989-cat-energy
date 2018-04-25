@@ -5,11 +5,46 @@
 
 .catalog__title {
   .oswald-title();
-  padding: 20px;
 }
 
 .catalog__items {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+
+@media (min-width: @tabletwidth) {
+  .catalog__items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .catalog__item {
+    width: 320px;
+    margin-right: 68px;
+  }
+
+  .catalog__item:nth-of-type(2n) {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: @desktopwidth) {
+  .catalog__item {
+    width: 245px;
+    margin-right: 80px;
+  }
+
+  .catalog__item:nth-of-type(2n) {
+    margin-right: 80px;
+  }
+
+  .catalog__item:nth-of-type(4n) {
+    margin-right: 0;
+  }
+
+  .catalog__item:nth-of-type(n+5) {
+    margin-top: 40px;
+  }
 }

@@ -1,15 +1,13 @@
-// @import "logo.less";
-
 .header {
   margin: 0;
   padding: 0;
+  background-color: white;
 }
 
 .header__wrapper {
-  min-height: 65px;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  height: 65px;
 }
 
 .header__toggle {
@@ -33,5 +31,40 @@
   &--burger {
     background-image: url("img/icon-mobile-menu.svg");
     background-size: 18px 18px;
+  }
+}
+
+@media (min-width: @tabletwidth) {
+  .header__layout {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .header__navigation {
+    order: 2;
+    min-width: 50%;
+    margin-left: auto;
+  }
+
+  .header__promo {
+    order: 3;
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktopwidth) {
+  .header--cat-pictured {
+    background-image: linear-gradient(to right, white 0, white 50%, @hovergreen 50%, @hovergreen 100%);
+    background-color: @hovergreen;
+  }
+
+  .header--cat-pictured .header__layout {
+    min-height: 696px;
+    background-image: linear-gradient(to right, white 0, white 50%, transparent 50%, transparent 100%), url("../img/index-background-mobile@1x.jpg"), linear-gradient(to bottom, @hovergreen 0, @hovergreen 100%);
+    background-repeat: no-repeat;
+    background-position: left top, 100% top, 100% top;
+    background-size: auto, 720px 696px, auto;
+    background-color: transparent;
+    padding-top: 40px;
   }
 }

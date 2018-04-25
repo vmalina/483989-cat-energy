@@ -14,15 +14,46 @@
   color: @almostblack;
 }
 
-
 .commodity__info-item {
-  padding: 0;
   margin: 0;
+  padding: 0;
   font-size: 14px;
   line-height: 14px;
 }
 
-
 .commodity__order {
   margin-top: 14px;
+}
+
+@media (min-width: @tabletwidth) {
+  .commodity {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .commodity__name {
+    margin: 0;
+  }
+
+  .commodity__info-item {
+    margin: 0 0 0 auto;
+  }
+
+  .commodity__order {
+    margin-top: 20px;
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: @desktopwidth) {
+  .commodity__order {
+    width: 100%;
+    margin: 0;
+    flex-basis: 33.33%;
+  }
+
+  .commodity__info-item {
+    margin: 0 20px 0 auto;
+  }
 }
