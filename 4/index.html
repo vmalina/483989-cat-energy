@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
+    <base href="https://htmlacademy-adaptive.github.io/483989-cat-energy/4/">
+</head>
+  <body class="page page--main-page">
+
+    <h1 class="visually-hidden">CAT ENERGY. Функциональное питание для котов</h1>
+
+    <header class="header header--cat-pictured">
+
+      <div class="header__layout layout layout--limited">
+
+        <nav class="header__navigation header__navigation--displayed">
+          <ul class="header__menu menu">
+            <li class="menu__item"><a class="menu__link menu__link--current">Главная</a></li>
+            <li class="menu__item"><a class="menu__link" href="catalog.html">Каталог продукции</a></li>
+            <li class="menu__item"><a class="menu__link" href="form.html">Подбор программы</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__wrapper">
+          <!-- Окончательный вид логотипа прояснится после того, как выдадут остальные макеты -->
+          <div class="header__logo logo">
+            <a class="logo__link" title="Логотип Cat Energy">
+              <img class="logo__image" src="img/logo-mobile.svg" width="190" height="38" alt="Cat Energy" title="Логотип Cat Energy">
+            </a>
+          </div>
+          <button class="header__toggle header__toggle--hidden" type="button" title="Открыть меню"><span class="visually-hidden">Открыть меню</span></button>
+        </div>
+
+
+        <section class="header__promo promo">
+          <div class="promo__top">
+            <h2 class="promo__title">Функциональное питание для котов</h2>
+            <p class="promo__slogan">Занялся собой? Займись котом!</p>
+          </div>
+          <img class="promo__image" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Cat Energy Pro. Курица" title="Cat Energy Pro. Курица">
+          <a class="promo__link btn btn--green" href="form.html">Подобрать программу</a>
+        </section>
+
+      </div>
+
+    </header>
+
+
+    <section class="programs layout">
+      <h2 class="programs__title visually-hidden">Популярные программы питания</h2>
+      <ul class="programs__list">
+        <li class="programs__list-item program">
+          <h3 class="program__title program__title--losing">Похудение</h3>
+          <p class="program__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+          <a class="program__link btn btn--arrowed" href="catalog-slim.html" title="Перейти к каталогу SLIM">Каталог Slim</a>
+        </li>
+        <li class="programs__list-item program">
+          <h3 class="program__title program__title--gathering">Набор массы</h3>
+          <p class="program__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+          <a class="program__link btn btn--arrowed" href="catalog-pro.html" title="Перейти к каталогу PRO">Каталог Pro</a>
+        </li>
+      </ul>
+    </section>
+
+
+
+    <section class="about layout">
+      <h2 class="about__title"><span class="visually-hidden">О продукции. </span>Как это работает</h2>
+      <ol class="about__details">
+        <li class="about__detail about__detail--leaf-iconed">Функциональное питание содержит только полезные питательные вещества.</li>
+        <li class="about__detail about__detail--water-iconed">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
+        <li class="about__detail about__detail--cutlery-iconed">Замените один-два приема обычной еды на наше функциональное питание.</li>
+        <li class="about__detail about__detail--timer-iconed">Уже через месяц наслаждайтесь изменениями к лучшему нашего питомца!</li>
+      </ol>
+    </section>
+
+
+
+    <section class="example">
+      <div class="example__wrapper layout">
+        <h2 class="example__title"><span class="visually-hidden">Результаты применения. </span>Живой пример</h2>
+        <div class="example__results">
+          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день</p>
+
+          <ul class="example__tags">
+            <li class="example__tag tag">
+              <p class="tag__info">
+                <span class="tag__amount tag__label">5</span>
+                <span class="tag__unit tag__label"> кг</span>
+              </p>
+              <p class="tag__description">cнижение веса</p>
+            </li>
+            <li class="example__tag tag">
+              <p class="tag__info">
+                <span class="tag__amount tag__label">60</span>
+                <span class="tag__unit tag__label"> дней</span>
+              </p>
+              <p class="tag__description">затрачено времени</p>
+            </li>
+          </ul>
+          <p class="example__summary">Затраты на питание: <span class="example__summary-total">15 000</span> руб.</p>
+        </div>
+        <!-- Тут все будет зависеть от реализации. Пока очень черновая разметка, скорее даже плейсхолдер -->
+        <!-- </div> -->
+
+        <div class="example__slider slider">
+          <div class="slider__wrapper">
+            <img class="slider__image alider__image--before slider__image--visible" src="img/before-mobile@1x.png" width="320" height="240" alt="Фото До и После" title="Фото До и После">
+            <img class="slider__image alider__image--after" src="img/before-mobile@1x.png" width="320" height="240" alt="Фото До" title="Фото До">
+            <img class="slider__image alider__image--middle" src="img/after-mobile@1x.png" width="320" height="240" alt="Фото После" title="Фото После">
+          </div>
+          <div class="slider__controls">
+            <button class="slider__state slider__state--before" type="button" title="Посмотреть фото до применения Cat Energy">Было</button>
+            <!-- Это временно здесь, просто выглядит похоже -->
+            <div class="slider__scale"></div>
+            <button class="slider__state slider__state--after" type="button" title="Посмотреть фото после применения Cat Energy">Стало</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="map">
+      <h2 class="visually-hidden">Наш адрес, интерактивная и статичная карты</h2>
+      <section class="contacts contacts--white">
+        <h2 class="visually-hidden">Адрес нашей компании</h2>
+        <div class="contacts__layout layout">
+          <div class="contacts__wrapper">
+            <p class="contacts__slogan">Приглашаем <br>к сотрудничеству дилеров!</p>
+            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          </div>
+        </div>
+      </section>
+
+<!-- Для РР оставлен вариант статичной до 1440px
+  Переключаются по двойному клику. И, наверное, лучше начинать с картинки, ибо интерактивная может и не понадобиться вовсе, но...-->
+  <img class="map__image map__image--static  map__image--show map__js-link" src="img/bg-map-mobile@1x.png" width="320" height="400"  id="id-map-image" alt="Наш адрес на карте: Санкт-Петербург, ул. б.Конюшенная, д.19/8" title="Наш адрес на карте: Санкт-Петербург, ул. б.Конюшенная, д.19/8">
+  <!--  <iframe  class="map__image-iframe  map__image-hide map__js-link" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" id="id-map-iframe" allowfullscreen></iframe> -->
+</section>
+
+  <footer class="footer">
+    <div class="footer__layout layout">
+      <div class="footer__logo logo">
+        <a class="logo__link" title="Логотип Cat Energy">
+          <img class="logo__text" src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
+        </a>
+      </div>
+
+      <div class="footer__social">
+        <ul class="social">
+          <li class="social__item"><a class="social__link social__link--vk" href="#" title="В контакте"><span class="visually-hidden">В контакте</span></a></li>
+          <li class="social__item"><a class="social__link social__link--in" href="#" title="Instagram"><span class="visually-hidden">Instagram</span></a></li>
+          <li class="social__item"><a class="social__link social__link--fb" href="#" title="Facebook"><span class="visually-hidden">Facebook</span></a></li>
+        </ul>
+      </div>
+
+      <div class="footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Перейти на страницу интенсива 'Профессиональный HTML и CSS, уровень2'">HTML Academy</a>
+        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" title="Перейти на страницу интенсива 'Профессиональный HTML и CSS, уровень2'">
+          <img class="copyright__image" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy" title="Логотип HTML Academy">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
