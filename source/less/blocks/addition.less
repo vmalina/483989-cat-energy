@@ -5,15 +5,49 @@
 
 .addition__title {
   .oswald-title-lined();
-  padding-left: 20px;
+}
+
+.addition__link {
+  margin: 20px auto;
+  width: 280px;
+  min-height: 280px;
 }
 
 .addition__items {
-  margin: 30px 0 20px;
-  padding: 0 20px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .addition__item:first-of-type {
   .top-line();
+}
+
+@media (min-width: @tabletwidth) {
+  .addition__link {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktopwidth) {
+  .addition {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .addition__title {
+    width: 100%;
+  }
+
+  .addition__items {
+    width: 70%;
+  }
+
+  .addition__link {
+    margin: 0;
+    margin-left: auto;
+    max-width: 25%;
+  }
 }

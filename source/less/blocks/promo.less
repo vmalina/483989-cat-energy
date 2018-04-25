@@ -1,29 +1,129 @@
+//это очень странная конструкция с фонами, но зато при любом переполнении белый шрифт останется на зеленом фоне.
 .promo {
-  min-height: 420px;
   margin: 0;
-  padding: 28px 0 0;
+  padding: 0;
   font-family: @oswaldfont;
   text-align: center;
-  background-image: url("../img/index-background-mobile@1x.jpg"), linear-gradient(to bottom, @basegreen 0, @basegreen 305px, @basewhite 305px, @basewhite 100%);
-  background-repeat: no-repeat, no-repeat;
-  background-position: top center, top center;
-  background-size: @mobilewidth 305px, @mobilewidth 305px;
+  color: @basewhite;
+  background-color: @basewhite;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: @mobilewidth 305px;
+  position: relative;
+}
+
+.promo__top {
+  z-index: 1;
+  background-color: @basegreen;
+  background-image: linear-gradient(to bottom, transparent 0%, transparent 305px, @hovergreen 305px, @hovergreen 100%), url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto, @mobilewidth 305px;
 }
 
 .promo__title {
-  margin-bottom: 18px;
+  margin: 0;
+  padding: 0;
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
-  color: @basewhite;
 }
 
 .promo__slogan {
   margin: 0;
+  margin-top: 26px;
   margin-bottom: 28px;
   padding: 0;
   font-size: 14px;
   line-height: 14px;
-  color: @basewhite;
   text-transform: uppercase;
+}
+
+.promo__image {
+  z-index: 0;
+  display: block;
+  margin: 0 auto;
+  outline: none;
+}
+
+.promo__link {
+  z-index: 1;
+  margin: 3px 20px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+
+@media (min-width: @tabletwidth) {
+  .promo {
+    color: @baseblack;
+    background-color: @basewhite;
+    background-image: none;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .promo__top {
+    position: relative;
+    z-index: 1;
+    max-width: 460px;
+    text-align: left;
+    background-color: transparent;
+    background-image: none;
+  }
+
+  .promo__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .promo__slogan {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+
+  .promo__image {
+    position: relative;
+    //** отладка, пока нет рисунков//
+    width: 709px;
+    height: 609px;
+    order: 3;
+    //**//
+  }
+
+  .promo__link {
+    position: relative;
+    max-width: 245px;
+    margin: 0;
+    padding: 16px;
+    font-size: 20px;
+    line-height: 20px;
+    order: 2;
+  }
+}
+
+@media (min-width: @desktopwidth) {
+  .promo {
+    position: relative;
+    background-color: transparent;
+    padding: 40px 40px 0;
+    min-height: 500px;
+  }
+
+
+  .promo__image {
+    position: absolute;
+    top: auto;
+    left: 30%;
+    right: auto;
+    bottom: 0;
+    //** отладка, пока нет рисунков//
+    width: 552px;
+    height: 499px;
+    //**//
+  }
 }

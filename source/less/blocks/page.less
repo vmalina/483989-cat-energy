@@ -1,0 +1,26 @@
+.page {
+  font-weight: 400;
+  color: @baseblack;
+  background-color: @basewhite;
+  min-width: 320px;
+
+  &--inner-page {
+    font-family: @oswaldfont;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &--main-page {
+    font-size: 14px;
+    line-height: 18px;
+    font-family: @arialfont;
+  }
+}
+
+
+@media (min-width: @tabletwidth) {
+  .page--main-page {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
