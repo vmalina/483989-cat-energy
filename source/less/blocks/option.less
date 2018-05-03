@@ -2,10 +2,6 @@
   position: relative;
 }
 
-.option:not(:last-of-type) {
-  margin-bottom: 12px;
-}
-
 .option__label {
   display: inline-block;
   margin-left: 40px;
@@ -28,14 +24,18 @@
   border-radius: 50%;
 }
 
+.option__control--checkbox + .option__label::before {
+  top: 4px;
+}
+
 .option__control:checked + .option__label::after {
   content: "";
   position: absolute;
-  top: 9px;
-  left: 9px;
 }
 
 .option__control--radio:checked + .option__label::after {
+  top: 9px;
+  left: 9px;
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -43,8 +43,10 @@
 }
 
 .option__control--checkbox:checked + .option__label::after {
-  width: 12px;
-  height: 6px;
+  top: 10px;
+  left: 6px;
+  width: 20px;
+  height: 10px;
   transform: rotate(-45deg);
   border-bottom: 2px solid @basegreen;
   border-left: 2px solid @basegreen;
@@ -70,4 +72,65 @@
 .option__control--checkbox:disabled + .option__label::after {
   border-bottom: 2px solid @middlegrey;
   border-left: 2px solid @middlegrey;
+}
+
+@media (min-width: @tabletwidth) {
+  .option__label {
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 50px;
+    padding: 8px 8px 13px;
+
+    &::before {
+      top: 0;
+      width: 38px;
+      height: 38px;
+    }
+  }
+
+  .option__control:checked + .option__label::after {
+    top: 10px;
+    left: 10px;
+  }
+
+  .option__control--radio:checked + .option__label::after {
+    width: 18px;
+    height: 18px;
+  }
+
+  .option__control--checkbox:checked + .option__label::after {
+    width: 20px;
+    height: 10px;
+  }
+}
+
+
+@media (min-width: @desktopwidth) {
+  .option__label {
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      width: 34px;
+      height: 34px;
+    }
+  }
+
+  .option__control:checked + .option__label::after {
+    top: 10px;
+    left: 10px;
+  }
+
+  .option__control--radio:checked + .option__label {
+    &::after {
+      width: 18px;
+      height: 18px;
+      top: 11px;
+      left: 8px;
+    }
+
+    &::before {
+      top: 3px;
+    }
+  }
 }

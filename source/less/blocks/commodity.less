@@ -1,8 +1,8 @@
 .commodity {
+  box-shadow: 0 0 1px 0 @lightgrey;
   position: relative;
+  padding: 13px 0 15px;
   margin: 0;
-  padding: 14px 0;
-  .bottom-line();
 }
 
 .commodity__name {
@@ -23,6 +23,7 @@
 
 .commodity__order {
   margin-top: 14px;
+  margin-bottom: 3px;
 }
 
 @media (min-width: @tabletwidth) {
@@ -30,14 +31,19 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    padding: 20px 38px 24px;
   }
 
   .commodity__name {
     margin: 0;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .commodity__info-item {
     margin: 0 0 0 auto;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   .commodity__order {
@@ -47,13 +53,20 @@
 }
 
 @media (min-width: @desktopwidth) {
+  .commodity {
+    padding: 16px 0;
+    justify-content: space-between;
+  }
+
   .commodity__order {
-    width: 100%;
     margin: 0;
     flex-basis: 33.33%;
+    max-width: 245px;
+    font-size: 16px;
   }
 
   .commodity__info-item {
-    margin: 0 20px 0 auto;
+    margin: 0 40px 0 auto;
+    width: 285px;
   }
 }

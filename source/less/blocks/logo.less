@@ -1,4 +1,4 @@
-.logo__link {
+.logo {
   opacity: 1;
 
   &:hover,
@@ -11,7 +11,27 @@
   }
 }
 
+.logo__img {
+  display: block;
+}
+
 .logo__text {
   display: block;
   padding-top: 7px; /*PP*/
+}
+
+@media (min-width: @tabletwidth) {
+  .logo__img {
+    width: 173px;
+    height: 58px;
+    margin-top: 6px;
+  }
+}
+
+@media (min-width: @desktopwidth) {
+  .logo__img {
+    width: 202px;
+    height: 59px;
+    margin-top: auto;
+  }
 }

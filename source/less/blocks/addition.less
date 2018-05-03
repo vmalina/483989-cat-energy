@@ -1,14 +1,15 @@
 .addition {
-  margin: 0;
-  padding: 0;
+  .v-zero();
 }
 
 .addition__title {
   .oswald-title-lined();
+  margin-top: 30px;
+  margin-bottom: 34px;
 }
 
 .addition__link {
-  margin: 20px auto;
+  margin: 40px auto 36px;
   width: 280px;
   min-height: 280px;
 }
@@ -24,11 +25,27 @@
 }
 
 @media (min-width: @tabletwidth) {
+  .addition__title {
+    width: 100%;
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: 64px;
+    margin-bottom: 81px;
+    padding: 0 38px;
+
+    &::after {
+      margin-top: 24px;
+      margin-left: 38px;
+    }
+  }
+
   .addition__link {
     width: 100%;
     margin: 0;
+    margin-top: 70px;
   }
 }
+
 
 @media (min-width: @desktopwidth) {
   .addition {
@@ -38,11 +55,19 @@
   }
 
   .addition__title {
-    width: 100%;
+    margin-top: 72px;
+    margin-bottom: 81px;
+    padding: 0;
+
+    &::after {
+      margin-bottom: 10px;
+    }
   }
 
   .addition__items {
-    width: 70%;
+    min-width: 900px;
+    margin-top: 0;
+    padding-right: 4px;
   }
 
   .addition__link {
