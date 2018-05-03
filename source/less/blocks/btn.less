@@ -46,7 +46,7 @@
 
 .btn--arrowed {
   position: relative;
-  padding-right: 40px;
+  padding-right: 45px;
   padding-left: 0;
   color: @baseblack;
 
@@ -62,21 +62,32 @@
     background-repeat: no-repeat;
     background-position: left center;
     background-size: auto;
-    transform: scale(0.8);
   }
 
   &:hover::after,
   &:focus::after {
-    // background-image: url("../img/icon-right-arrow-verylong.svg");
-    transform: scale(1, 0.8), translateX(3px);
+    background-image: url("../img/icon-right-arrow-verylong.svg");
   }
 
   &:active {
     opacity: 0.3;
 
     &::after {
-      // background-image: url("../img/icon-right-arrow-verylong.svg");
-      transform: scale(1, 0.8), translateX(3px);
+      background-image: url("../img/icon-right-arrow-verylong.svg");
     }
+  }
+}
+
+
+@media (min-width: @tabletwidth) {
+  .btn {
+    font-size: 16px;
+  }
+}
+
+
+@media (min-width: @desktopwidth) {
+  .btn {
+    font-size: 20px;
   }
 }

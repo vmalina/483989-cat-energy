@@ -1,6 +1,6 @@
 .about {
-  margin: 0;
-  padding: 0 20px;
+  .v-zero();
+  margin-top: 18px;
 }
 
 .about__title {
@@ -8,7 +8,8 @@
 }
 
 .about__details {
-  margin: 27px 0 39px;
+  margin: 0;
+  margin-top: 27px;
   padding: 0;
   list-style: none;
   counter-reset: ol-counter;
@@ -67,6 +68,10 @@
 }
 
 @media (min-width: @tabletwidth) {
+  .about {
+    margin-top: 46px;
+  }
+
   .about__title {
     .oswald-title(60px, 60px);
   }
@@ -74,14 +79,14 @@
   .about__details {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    margin-top: 72px;
   }
 
   .about__detail {
-
     width: 245px;
     min-height: 230px;
     padding: 110px 0 20px;
+    margin: 0;
 
     &::before {
       width: 80px;
@@ -107,15 +112,33 @@
   .about__detail:nth-of-type(n+3) {
     margin-top: 87px;
   }
+
+  .about__detail:nth-of-type(2n) {
+    margin-left: 139px;
+  }
 }
+
 
 @media (min-width: @desktopwidth) {
   .about {
-    margin-top: 80px;
+    margin-top: 75px;
   }
 
   .about__detail:nth-of-type(n+3) {
     margin-top: 0;
+  }
+
+  .about__detail:nth-of-type(2n) {
+    margin-left: 0;
+  }
+
+  .about__detail {
+    width: 240px;
+    margin-right: 85px;
+  }
+
+  .about__detail:nth-of-type(4n) {
+    margin-right: 0;
   }
 
   .about__detail:nth-of-type(n+5) {

@@ -20,7 +20,7 @@
 .oswald-title-lined() {
   display: flex;
   flex-direction: row;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
@@ -30,7 +30,7 @@
     content: "";
     width: auto;
     height: 3px;
-    margin: auto 0 8px 24px;
+    margin: 12px 0 auto 24px;
     flex-grow: 1;
     flex-shrink: 1;
     background: @basegreen;
@@ -39,7 +39,6 @@
     vertical-align: top;
   }
 }
-
 
 .top-line(@padding: 0) {
   &::before {
@@ -65,4 +64,19 @@
     height: 1px;
     background-color: rgba(205, 205, 205, 0.5);
   }
+}
+
+.zero-padding() {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.zero-margin() {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.v-zero() {
+  .zero-padding();
+  .zero-margin();
 }

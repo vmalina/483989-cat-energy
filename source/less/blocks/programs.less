@@ -1,3 +1,8 @@
+.programs {
+  .v-zero();
+  margin-top: 24px;
+}
+
 .programs__list {
   margin: 0;
   padding: 0;
@@ -8,13 +13,24 @@
   margin-bottom: 20px;
 }
 
+
+@media (min-width: @tabletwidth) {
+  .programs {
+    margin-top: 0;
+  }
+
+  .programs__list-item:not(:last-of-type) {
+    margin-bottom: 32px;
+  }
+}
+
+
 @media (min-width: @desktopwidth) {
   .programs__list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 80px;
-    margin-bottom: 80px;
   }
 
   .programs__list-item:not(:last-of-type) {

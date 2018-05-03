@@ -1,5 +1,4 @@
 .info {
-  // margin: 0;
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -9,4 +8,17 @@
 
 .info__name {
   margin-right: 40px;
+}
+
+
+@media (min-width: @tabletwidth) {
+  .info {
+    font-size: 16px;
+    line-height: 16px;
+    padding: 10px 0 6px;
+  }
+
+  .info__name {
+    margin-right: 50px;
+  }
 }

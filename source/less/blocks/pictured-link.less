@@ -1,21 +1,18 @@
 .pictured-link {
   position: relative;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 280px;
   min-height: 289px;
-  padding: 40px;
-  text-decoration: none;
-  text-align: center;
+  padding: 64px 40px 42px;
   background-color: @hovergreen;
-  font-family: @arialfont;
-  font-size: 16px;
-  line-height: 20px;
   color: white;
-  align-items: flex-end;
-  justify-content: center;
+  text-decoration: none;
   background-position: center;
-  background-size: contain;
+  background-size: 280px 289px;
   background-repeat: no-repeat;
+  background-origin: border-box;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
 
   &:hover,
@@ -30,11 +27,9 @@
   &::before {
     content: "";
     display: block;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    right: 0;
-    width: 100%;
+    margin: 0 auto;
+    border: 1px solid red;
+    width: 55px;
     height: 60px;
     background-position: center;
     background-size: auto;
@@ -45,37 +40,76 @@
 
 .pictured-link__text {
   max-width: 150px;
+  margin: 0 auto;
+  font-family: @arialfont;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+@media (max-width: @mobilewidthonly) and (min-resolution: @retinadpi), (max-width: @mobilewidthonly) and (min-resolution: retinadppx) {
+  background-image: url("../img/gift-photo-mobile@2x.jpg");
 }
 
 @media (min-width: @tabletwidth) {
   .pictured-link {
-    width: 100%;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    padding: 40px 0;
+    width: 100%;
+    min-height: 200px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-size: 708px 200px;
+
+    @media (min-resolution: @retinadpi), (min-resolution: @retinadppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+      background-size: 708px 200px;
+    }
   }
 
   .pictured-link::before {
-    right: auto;
-    left: 50px;
-    top: 0;
-    bottom: 0;
+    position: relative;
+    top: -5px;
+    left: -33px;
     width: 55px;
-    height: 100%;
+    height: 60px;
+    background-size: 55px 60px;
+    margin: auto;
+  }
+
+  .pictured-link__text {
+    margin: auto;
+    text-align: left;
+    min-width: 161px;
   }
 }
 
+
 @media (min-width: @desktopwidth) {
   .pictured-link {
-    align-items: flex-end;
-    justify-content: center;
+    width: 245px;
+    min-height: 289px;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    background-size: 245px 289px;
+
+    @media (min-resolution: @retinadpi), (min-resolution: @retinadppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+      background-size: 245px 289px;
+    }
   }
 
   .pictured-link::before {
-    right: 0;
+    top: -20px;
     left: 0;
-    top: 50px;
-    bottom: auto;
-    width: 100%;
-    height: 60px;
+    right: 0;
+  }
+
+  .pictured-link__text {
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 4px;
   }
 }

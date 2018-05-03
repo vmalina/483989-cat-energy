@@ -39,7 +39,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    max-width: 440px;
+    max-width: 450px;
   }
 
   .menu__link {
@@ -51,18 +51,25 @@
   }
 
   .menu__item:not(:first-of-type) {
-    margin-left: 12px;
+    margin-left: 35px;
   }
 }
 
 
 @media (min-width: @desktopwidth) {
   .menu {
-    max-width: 600px;
+    max-width: 650px;
   }
 
+  .menu__item:not(:first-of-type) {
+    margin-left: 30px;
+  }
 
-  .header__layout--cat-pictured .menu__link {
+  .menu__link {
+    font-size: 20px;
+  }
+
+  .header--cat-pictured .menu__link {
     color: rgba(255, 255, 255, 1);
 
     &:hover,
