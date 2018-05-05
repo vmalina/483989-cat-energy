@@ -25,6 +25,7 @@
   padding: 0;
   font-weight: 400;
 
+
   &--normal {
     margin-bottom: 36px;
     margin-top: 12px;
@@ -38,11 +39,12 @@
   }
 }
 
+
 .form__options {
   list-style: none;
   position: relative;
-  padding: 20px 0;
-  margin: 24px 0 3px;
+  padding: 0;
+  margin: 0;
 
   &--bordered::after {
     content: "";
@@ -55,13 +57,10 @@
     border: 1px solid @lightgrey;
   }
 
-  &--checkbox {
-    padding: 0;
-    margin: 0;
-  }
 
   &--radio {
-    padding: 22px 0;
+    padding: 19px 0 25px;
+    margin-top: 23px;
   }
 }
 
@@ -71,7 +70,7 @@
 
 .form__button {
   width: 100%;
-  margin-top: 25px;
+  margin-top: 21px;
   margin-bottom: 21px;
 }
 
@@ -125,8 +124,8 @@
     flex-wrap: wrap;
 
     &--radio {
-      padding: 26px 30px 20px;
-      margin: 76px 0 0;
+      padding: 27px 32px 25px;
+      margin: 71px 0 0;
     }
 
     &--bordered::after {
@@ -153,7 +152,7 @@
   }
 
   .form__fieldset--data {
-    margin-top: 53px;
+    margin-top: 51px;
   }
 
   .form__fieldset--comment {
@@ -174,7 +173,7 @@
     font-size: 20px;
     line-height: 20px;
     margin-left: 40px;
-    margin-top: 21px;
+    margin-top: 23px;
   }
 
   .form__footnote {
@@ -196,11 +195,11 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    padding-bottom: 64px;
+    padding-bottom: 60px;
   }
 
   .form__title {
-    margin-top: 28px;
+    margin-top: 30px;
   }
 
   .form__fieldset {
@@ -262,7 +261,7 @@
   }
 
   .form__wrapper--horizontal {
-    margin-top: 25px;
+    margin-top: 30px;
   }
 
   .form__button {

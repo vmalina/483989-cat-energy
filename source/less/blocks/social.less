@@ -21,18 +21,43 @@
 
 .social__link {
   display: block;
-  width: 22px;
-  height: 22px;
-  box-shadow: 0  0 1px 1px grey;
-}
+  color: @darkgrey;
+  line-height: 27px;
+  vertical-align: middle;
 
-@media (min-width: @desktopwidth) {
-  .social__item {
-    margin-right: 16px;
+  &:hover,
+  &:focus {
+    color: @basegreen;
   }
 
-  .social__link {
+  &:active {
+    color: @basegreen;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tabletwidth) {
+  .social__item {
+    margin-right: 29px;
+  }
+
+  .social__icon {
+    line-height: 30px;
+    vertical-align: middle;
+  }
+
+  .social__icon--vk {
     width: 30px;
-    height: 30px;
+    height: 16px;
+  }
+
+  .social__icon--in {
+    width: 23px;
+    height: 23px;
+  }
+
+  .social__icon--fb {
+    width: 14px;
+    height: 28px;
   }
 }
