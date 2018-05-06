@@ -106,16 +106,16 @@
   .slider__slide {
     height: 517px;
     width: 100%;
-  }
 
-  .slider__slide--before {
-    right: auto;
-    width: 50%;
-  }
+    &--before {
+      right: auto;
+      width: 50%;
+    }
 
-  .slider__slide--after {
-    right: 0;
-    width: 50%;
+    &--after {
+      right: 0;
+      width: 50%;
+    }
   }
 
   .slider__image--after {
@@ -143,11 +143,33 @@
     position: relative;
   }
 
+  // частичное дублирование кода для предотвращения трансгрессии и расщепления котика... это нужно.
   .slider__wrapper {
+    height: 517px;
+    width: 690px;
     position: absolute;
     bottom: 135px;
     right: -40px;
     left: auto;
+  }
+
+  .slider__slide {
+    height: 517px;
+    width: 100%;
+
+    &--before {
+      right: auto;
+      width: 50%;
+    }
+
+    &--after {
+      right: 0;
+      width: 50%;
+    }
+  }
+
+  .slider__image--after {
+    left: -345px;
   }
 
   .slider__controls {

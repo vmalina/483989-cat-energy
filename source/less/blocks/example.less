@@ -60,6 +60,10 @@
     flex-wrap: wrap;
     padding-top: 40px;
     padding-bottom: 42px;
+
+    &::before {
+      display: none;
+    }
   }
 
   .example__text {
@@ -95,6 +99,29 @@
     background-repeat: no-repeat;
     background-position: bottom right;
     background-origin: border-box;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: auto;
+      bottom: 0;
+      width: 100vw;
+      height: 395px;
+    }
+
+    &::before {
+      background-color: @basegrey;
+      right: 100%;
+      left: auto;
+    }
+
+    &::after {
+      background-color: @hovergrey;
+      left: 100%;
+      right: auto;
+    }
   }
 }
 
@@ -140,6 +167,7 @@
 
     &::before {
       content: "";
+      display: block;
       position: absolute;
       background: @basegrey;
       top: 0;
@@ -159,10 +187,14 @@
     background-position: bottom left;
     position: relative;
 
+    &::before {
+      display: none;
+    }
+
     &::after {
       content: "";
       position: absolute;
-      background: @hovergrey;
+      background-color: @hovergrey;
       top: 0;
       bottom: 0;
       width: 100vw;

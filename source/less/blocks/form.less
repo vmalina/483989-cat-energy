@@ -35,10 +35,11 @@
   }
 
   &--accented {
-    .oswald-title-lined();
+    .oswald-title(24px, 24px);
+    margin-bottom: 34px;
+    .green-line-init(none, block, 20px, 14px);
   }
 }
-
 
 .form__options {
   list-style: none;
@@ -107,13 +108,10 @@
       font-size: 36px;
       line-height: 36px;
       margin-bottom: 75px;
-
-      &::after {
-        margin-top: 24px;
-        margin-left: 38px;
-      }
+      .green-line-update (block, block, 40px, 22px);
     }
   }
+
 
   .form__legend--accented br {
     display: none;
@@ -207,6 +205,10 @@
     padding: 24px 0 0;
   }
 
+  .form__legend--accented {
+    .green-line-update(block, block, 40px, 22px);
+  }
+
   .form__fieldset--program {
     display: flex;
     flex-wrap: wrap;
@@ -223,6 +225,7 @@
 
   .form__fieldset--program .form__options {
     flex-basis: 47%;
+    max-width: 47%; //Для ИЕ
     padding: 24px 34px;
     margin: 0 0 0 auto;
   }
@@ -237,7 +240,7 @@
   }
 
   .form__fieldset--data .form__legend {
-    flex-basis: 100%;
+    margin-right: 50%;
   }
 
   .form__fieldset--data .form__field {

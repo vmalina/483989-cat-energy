@@ -1,4 +1,40 @@
-// котик -----------------------------------------------
+//required ------------------------------------------------
+function setRequired(requiredValue) {
+  var inputs=document.getElementsByTagName('input');
+  var wasError = false;
+  if (!(inputs === null)) {
+
+    for (var i = 0; i < inputs.length; i++) {
+
+      if (requiredValue === false) {
+        inputs[i].required = requiredValue;
+        inputs[i].wasCleared = true;
+      }
+      else {
+        if ((inputs[i].wasCleared === true) && !(inputs[i].type === 'checkbox'))  {
+          inputs[i].required = requiredValue;
+          wasError = (!inputs[i].validity.valid)|| wasError;
+        }
+      }
+    }
+  }
+
+  if ((wasError === false) && (requiredValue === true)) {
+    var formProgram = document.getElementById('id-form-program');
+    if (!formProgram === null) {
+      formProgram.submit();
+    }
+  }
+}
+
+if (document.readyState || document.body.readyState=='complete') {
+  if (document.forms.length > 0) {
+    setRequired(false);
+  }
+}
+
+
+//котик -----------------------------------------------
 function viewMix() {
   var wrapper=document.getElementById('id-slider-wrapper');
   if (!(wrapper=== null)) {
@@ -6,6 +42,7 @@ function viewMix() {
     wrapper.children[0].style.width=''+Math.floor(size/2)+'px';
     wrapper.children[1].style.width=''+Math.floor(size/2)+'px';
     wrapper.children[1].children[0].children[2].style.left='-'+Math.floor(size/2)+'px';
+    //ад, но когда этот код был написан, picture еще не было... :-)
   }
 }
 

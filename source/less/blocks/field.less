@@ -8,10 +8,21 @@
   line-height: 18px;
   text-transform: uppercase;
   flex-shrink: 1;
+  position: relative;
 }
 
 .field__label {
   color: @almostblack;
+}
+
+.field__icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  right: 20px;
+  color: @darkgrey;
+  z-index: 2;
 }
 
 .field--required > .field__label::after {
@@ -41,6 +52,16 @@
     border: 2px solid @basered;
   }
 }
+
+.field__input--iconed:focus + .field__icon {
+  color: @basegreen;
+}
+
+
+.field__input--iconed:invalid + .field__icon {
+  color: red;
+}
+
 
 .field__input--simple {
   padding: 14px 12px 13px;
@@ -81,15 +102,10 @@
 }
 
 .field__input--email-iconed {
-  background-image: url("../img/icon-mail.svg");
-  background-size: 17px 13px;
   margin-left: 18px;
 }
 
-
 .field__input--pnone-iconed {
-  background-image: url("../img/icon-phone.svg");
-  background-size: 20px 20px;
   margin-left: 4px;
 }
 

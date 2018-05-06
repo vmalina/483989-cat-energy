@@ -74,7 +74,7 @@
     align-items: center;
     justify-content: flex-end;
     padding: 40px 36px;
-    background-image: linear-gradient(to bottom, @basewhite 0, @basewhite 28%, @basegrey 28%, @basegrey 100%);
+    background-image: linear-gradient(to bottom, @basewhite 0, @basewhite 22.5%, @basegrey 22.5%, @basegrey 100%);
   }
 
   .product__link {
@@ -110,5 +110,20 @@
 
   .product__link {
     width: 245px;
+  }
+
+  .product__info-item {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: @lightgrey;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+    }
   }
 }

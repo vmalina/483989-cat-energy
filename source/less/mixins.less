@@ -17,26 +17,51 @@
   text-transform: uppercase;
 }
 
-.oswald-title-lined() {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 34px;
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 400;
-  font-family: @oswaldfont;
+.green-line-init (@before: none, @after: block, @gap: 20px, @top: 10px) {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: @before;
+    position: absolute;
+    background: @basegreen;
+    top: @top;
+    bottom: 0;
+    width: 100vw;
+    height: 3px;
+    right: 100%;
+    margin-right: @gap;
+  }
 
   &::after {
     content: "";
-    width: auto;
+    display: @after;
+    position: absolute;
+    background-color: @basegreen;
+    top: @top;
+    bottom: 0;
+    width: 100vw;
     height: 3px;
-    margin: 12px 0 auto 24px;
-    flex-grow: 1;
-    flex-shrink: 1;
-    background: @basegreen;
-    display: flex;
-    align-items: flex-start;
-    vertical-align: top;
+    left: 100%;
+    right: 0;
+    margin-left: @gap;
+  }
+}
+
+.green-line-update (@before:none, @after: block, @gap: 20px, @top: 0) {
+  &::before {
+    display: @before;
+    margin-right: @gap;
+    top: @top;
+  }
+
+  &::after {
+    display: @after;
+    top: @top;
+    margin-left: @gap;
   }
 }
 
