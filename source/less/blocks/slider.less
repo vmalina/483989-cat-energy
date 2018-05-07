@@ -60,6 +60,17 @@
   text-transform: uppercase;
   cursor: pointer;
   padding: 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 13px;
+    background-color: @lightgrey;
+  }
 
   &:hover,
   &:focus {
@@ -83,10 +94,6 @@
   .slider {
     padding-top: 40px;
     padding-bottom: 63px;
-    // background-image: linear-gradient(to right, @basegrey 0, @basegrey 50%, @hovergrey 50%, @hovergrey 100%);
-    // background-position: bottom center;
-    // background-size: 100% 100%;
-    // background-repeat: no-repeat;
   }
 
   .slider__wrapper {
@@ -99,16 +106,16 @@
   .slider__slide {
     height: 517px;
     width: 100%;
-  }
 
-  .slider__slide--before {
-    right: auto;
-    width: 50%;
-  }
+    &--before {
+      right: auto;
+      width: 50%;
+    }
 
-  .slider__slide--after {
-    right: 0;
-    width: 50%;
+    &--after {
+      right: 0;
+      width: 50%;
+    }
   }
 
   .slider__image--after {
@@ -116,7 +123,7 @@
   }
 
   .slider__controls {
-    padding: 9px 0 0;
+    padding: 0;
   }
 
   .slider__state {
@@ -132,15 +139,37 @@
     display: flex;
     flex-direction: column;
     overflow: visible;
-    padding-bottom: 10px;
+    padding-bottom: 55px;
     position: relative;
   }
 
+  // частичное дублирование кода для предотвращения трансгрессии и расщепления котика... это нужно.
   .slider__wrapper {
+    height: 517px;
+    width: 690px;
     position: absolute;
-    bottom: 80px;
+    bottom: 135px;
     right: -40px;
     left: auto;
+  }
+
+  .slider__slide {
+    height: 517px;
+    width: 100%;
+
+    &--before {
+      right: auto;
+      width: 50%;
+    }
+
+    &--after {
+      right: 0;
+      width: 50%;
+    }
+  }
+
+  .slider__image--after {
+    left: -345px;
   }
 
   .slider__controls {

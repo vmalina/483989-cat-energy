@@ -8,19 +8,21 @@
   padding: 8px 6px 4px;
   vertical-align: baseline;
   text-transform: uppercase;
-}
+  position: relative;
 
-.option__label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30px;
-  height: 30px;
-  box-shadow: 0 0 0 1px @lightgrey;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid @lightgrey;
+    z-index: 1;
+  }
 }
 
 .option__control--radio + .option__label::before {
+  top: 2px;
   border-radius: 50%;
 }
 
@@ -31,11 +33,12 @@
 .option__control:checked + .option__label::after {
   content: "";
   position: absolute;
+  z-index: 2;
 }
 
 .option__control--radio:checked + .option__label::after {
-  top: 9px;
-  left: 9px;
+  top: 11px;
+  left: -31px;
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -44,21 +47,38 @@
 
 .option__control--checkbox:checked + .option__label::after {
   top: 10px;
-  left: 6px;
+  left: -34px;
   width: 20px;
-  height: 10px;
+  height: 11px;
   transform: rotate(-45deg);
   border-bottom: 2px solid @basegreen;
   border-left: 2px solid @basegreen;
 }
 
-.option__control:hover + .option__label::before,
-.option__control:active + .option__label::before {
-  box-shadow: 0 0 0 1px @middlegrey;
+.option__control:hover + .option__label,
+.option__control:focus + .option__label {
+  color: rgba(17, 17, 17, 0.8);
+
+  &::before {
+    border: 1px solid @middlegrey;
+  }
 }
 
+// Не работает из-за непонятного глюка. Вместо одной строки пришлось лепить конструкцию ниже.
+// .option__control:active + .option__label {
+//   opacity: 0.3;
+// }
+
 .option__control:active + .option__label {
-  opacity: 0.3;
+  color: rgba(17, 17, 17, 0.3);
+
+  &::before {
+    opacity: 0.3;
+  }
+
+  &::after {
+    opacity: 0.3;
+  }
 }
 
 .option__control:disabled + .option__label {
@@ -79,58 +99,40 @@
     font-size: 20px;
     line-height: 20px;
     margin-left: 50px;
-    padding: 8px 8px 13px;
+    padding: 8px 8px 12px;
 
     &::before {
-      top: 0;
-      width: 38px;
-      height: 38px;
+      left: -53px;
+      width: 40px;
+      height: 40px;
+      z-index: 1;
     }
   }
 
-  .option__control:checked + .option__label::after {
-    top: 10px;
-    left: 10px;
+  .option__control--radio + .option__label::before {
+    top: -2px;
   }
 
   .option__control--radio:checked + .option__label::after {
+    top: 9px;
+    left: -42px;
     width: 18px;
     height: 18px;
   }
 
-  .option__control--checkbox:checked + .option__label::after {
-    width: 20px;
-    height: 10px;
-  }
-}
-
-
-@media (min-width: @desktopwidth) {
-  .option__label {
-    font-size: 20px;
-    line-height: 20px;
-
-    &::before {
-      width: 34px;
-      height: 34px;
-    }
+  .option__control--checkbox + .option__label::before {
+    top: 1px;
+    left: -50px;
   }
 
   .option__control:checked + .option__label::after {
-    top: 10px;
-    left: 10px;
+    content: "";
+    position: absolute;
+    z-index: 2;
   }
 
-  .option__control--radio:checked + .option__label {
-    &::after {
-      width: 18px;
-      height: 18px;
-      top: 11px;
-      left: 8px;
-    }
-
-    &::before {
-      top: 3px;
-    }
+  .option__control--checkbox:checked + .option__label::after {
+    top: 12px;
+    left: -39px;
   }
 }

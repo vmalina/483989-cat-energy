@@ -11,48 +11,46 @@
   font-size: 16px;
   line-height: 16px;
   text-decoration: none;
+  display: flex;
+  width: 100%;
   color: @darkgrey;
+  fill: @darkgrey;
 
   &:hover,
   &:focus {
     color: @basegreen;
+    fill: @basegreen;
   }
 
   &:active {
     color: @basegreen;
+    fill: @basegreen;
     opacity: 0.3;
-  }
-}
-
-.copyright__logo {
-  opacity: 1;
-  //fill:@darkgrey;
-
-  &:hover,
-  &:focus {
-    opacity: 1;
-    //fill:@basegreen;
-  }
-
-  &:active {
-    opacity: 0.3;
-    //fill:@basegreen;
   }
 }
 
 .copyright__image {
   display: block;
+  width: 27px;
+  height: 34px;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 @media (min-width: @tabletwidth) {
   .copyright__link {
-    margin-right: 23px;
+    width: auto;
+  }
+
+  .copyright__image {
+    margin-left: 23px;
   }
 }
 
 
 @media (min-width: @desktopwidth) {
-  .copyright__link {
-    margin-right: 23px;
+  .copyright__image {
+    margin-left: 23px;
   }
 }

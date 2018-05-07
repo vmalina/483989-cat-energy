@@ -77,20 +77,21 @@
     }
 
     &:active {
-      border: 2px solid green;
+      border: 2px solid @basegreen;
       box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
-    }
-
-    &:active::after {
-      top: 9px;
-      left: 9px;
     }
   }
 }
 
 
+@media (min-width: @tabletwidth) {
+  .range {
+    margin: 10px 22px 0;
+  }
+}
+
 @media (min-width: @desktopwidth) {
   .range {
-    margin: 0 21px;
+    margin-bottom: 10px;
   }
 }

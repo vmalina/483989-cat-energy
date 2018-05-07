@@ -25,6 +25,7 @@
   padding: 0;
   font-weight: 400;
 
+
   &--normal {
     margin-bottom: 36px;
     margin-top: 12px;
@@ -34,15 +35,17 @@
   }
 
   &--accented {
-    .oswald-title-lined();
+    .oswald-title(24px, 24px);
+    margin-bottom: 34px;
+    .green-line-init(block, block, 20px, 14px);
   }
 }
 
 .form__options {
   list-style: none;
   position: relative;
-  padding: 20px 0;
-  margin: 24px 0 3px;
+  padding: 0;
+  margin: 0;
 
   &--bordered::after {
     content: "";
@@ -55,13 +58,10 @@
     border: 1px solid @lightgrey;
   }
 
-  &--checkbox {
-    padding: 0;
-    margin: 0;
-  }
 
   &--radio {
-    padding: 22px 0;
+    padding: 19px 0 25px;
+    margin-top: 23px;
   }
 }
 
@@ -71,7 +71,7 @@
 
 .form__button {
   width: 100%;
-  margin-top: 25px;
+  margin-top: 21px;
   margin-bottom: 21px;
 }
 
@@ -108,13 +108,10 @@
       font-size: 36px;
       line-height: 36px;
       margin-bottom: 75px;
-
-      &::after {
-        margin-top: 24px;
-        margin-left: 38px;
-      }
+      .green-line-update (block, block, 40px, 22px);
     }
   }
+
 
   .form__legend--accented br {
     display: none;
@@ -125,8 +122,8 @@
     flex-wrap: wrap;
 
     &--radio {
-      padding: 26px 30px 20px;
-      margin: 76px 0 0;
+      padding: 27px 32px 25px;
+      margin: 71px 0 0;
     }
 
     &--bordered::after {
@@ -153,7 +150,7 @@
   }
 
   .form__fieldset--data {
-    margin-top: 53px;
+    margin-top: 51px;
   }
 
   .form__fieldset--comment {
@@ -174,7 +171,7 @@
     font-size: 20px;
     line-height: 20px;
     margin-left: 40px;
-    margin-top: 21px;
+    margin-top: 23px;
   }
 
   .form__footnote {
@@ -196,16 +193,20 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    padding-bottom: 64px;
+    padding-bottom: 60px;
   }
 
   .form__title {
-    margin-top: 28px;
+    margin-top: 30px;
   }
 
   .form__fieldset {
     width: 100%;
     padding: 24px 0 0;
+  }
+
+  .form__legend--accented {
+    .green-line-update(block, block, 40px, 22px);
   }
 
   .form__fieldset--program {
@@ -224,6 +225,7 @@
 
   .form__fieldset--program .form__options {
     flex-basis: 47%;
+    max-width: 47%; //Для ИЕ
     padding: 24px 34px;
     margin: 0 0 0 auto;
   }
@@ -238,7 +240,7 @@
   }
 
   .form__fieldset--data .form__legend {
-    flex-basis: 100%;
+    margin-right: 50%;
   }
 
   .form__fieldset--data .form__field {
@@ -262,7 +264,7 @@
   }
 
   .form__wrapper--horizontal {
-    margin-top: 25px;
+    margin-top: 30px;
   }
 
   .form__button {

@@ -24,7 +24,7 @@
   top: 0;
   left: 0;
   right: 0;
-  bottom: -13px;
+  bottom: -1px;
   border: 1px solid @lightgrey;
   z-index: 0;
 }
@@ -32,7 +32,7 @@
 .tag__description {
   position: relative;
   z-index: 2;
-  width: 50%;
+  width: 65%;
   top: -8px;
   padding: 0;
   text-align: center;
@@ -50,13 +50,25 @@
     width: 160px;
   }
 
+  .tag__info::after {
+    bottom: -8px;
+  }
+
   .tag__description {
-    width: 90%;
+    width: 85%;
     top: 0;
+    background-color: @basewhite;
   }
 
   .tag__label {
     font-size: 30px;
     line-height: 37px;
+  }
+}
+
+
+@media (min-width: @desktopwidth) {
+  .tag__description {
+    background-color: @basegrey;
   }
 }
