@@ -27,10 +27,11 @@ function setRequired(requiredValue) {
   }
 }
 
-if (document.readyState || document.body.readyState=='complete') {
+if (document.readyState || document.body.readyState == 'complete') {
   if (document.forms.length > 0) {
     setRequired(false);
   }
+  svg4everybody();
 }
 
 

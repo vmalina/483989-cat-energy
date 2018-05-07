@@ -4,8 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>document.createElement("picture");</script>
+    <script src="js/lib/picturefill.js" async></script>
   </head>
   <body class="page page--main-page">
 
@@ -44,6 +47,9 @@
             <p class="promo__slogan">Занялся собой? Займись котом!</p>
           </div>
           <picture class="promo__picture">
+            <source media="(min-width: 1300px)" srcset="img/webp/index-can-desktop@1x.webp 1x, img/webp/index-can-desktop@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 768px)" srcset="img/webp/index-can-tablet@1x.webp 1x, img/webp/index-can-tablet@2x.webp 2x" type="image/webp">
+            <source media="(max-width: 767px)" srcset="img/webp/index-can-mobile@1x.webp 1x, img/webp/index-can-mobile@2x.webp 2x" type="image/webp">
             <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
             <img class="promo__image" src="img/index-can-mobile@1x.png"  srcset="img/index-can-mobile@2x.png 2x" alt="Cat Energy Pro. Курица" title="Cat Energy Pro. Курица">
@@ -63,13 +69,13 @@
           <i class="program__icon program__icon--losing"><span class="visually-hidden">Изображение кота</span></i>
           <h3 class="program__title">Похудение</h3>
           <p class="program__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a class="program__link btn btn--arrowed" href="catalog-slim.html" title="Перейти к каталогу SLIM">Каталог Slim</a>
+          <a class="program__link btn btn--arrowed" href="catalog.html" title="Перейти к каталогу SLIM">Каталог Slim</a>
         </li>
         <li class="programs__list-item program">
           <i class="program__icon program__icon--gathering"><span class="visually-hidden">Изображение тигра</span></i>
           <h3 class="program__title">Набор массы</h3>
           <p class="program__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-          <a class="program__link btn btn--arrowed" href="catalog-pro.html" title="Перейти к каталогу PRO">Каталог Pro</a>
+          <a class="program__link btn btn--arrowed" href="catalog.html" title="Перейти к каталогу PRO">Каталог Pro</a>
         </li>
       </ul>
     </section>
@@ -119,6 +125,10 @@
           <div class="slider__wrapper" id="id-slider-wrapper">
             <div class="slider__slide slider__slide--before">
               <picture>
+                <!-- Кота отвратно сжало, а он должен быть красив. И еще есть моментик с этим форматом применительно к слайдеру... -->
+                <!-- <source media="(min-width: 1300px)" srcset="img/webp/before-desktop@1x.webp 1x, img/webp/before-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" srcset="img/webp/before-tablet@1x.webp 1x, img/webp/before-tablet@2x.webp 2x" type="image/webp">
+                <source media="(max-width: 767px)" srcset="img/webp/before-mobile@1x.webp 1x, img/webp/before-mobile@2x.webp 2x" type="image/webp"> -->
                 <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
                 <img class="slider__image slider__image--before" src="img/before-mobile@1x.png"  srcset="img/before-mobile@2x.png 2x" alt="Фото До">
@@ -126,6 +136,9 @@
             </div>
             <div class="slider__slide slider__slide--after">
               <picture>
+                <!-- <source media="(min-width: 1300px)" srcset="img/webp/after-desktop@1x.webp 1x, img/webp/after-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" srcset="img/webp/after-tablet@1x.webp 1x, img/webp/after-tablet@2x.webp 2x" type="image/webp">
+                <source media="(max-width: 767px)" srcset="img/webp/after-mobile@1x.webp 1x, img/webp/after-mobile@2x.webp 2x" type="image/webp"> -->
                 <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
                 <img class="slider__image slider__image--after" src="img/after-mobile@1x.png"  srcset="img/after-mobile@2x.png 2x" alt="Фото После">
@@ -164,6 +177,9 @@
     <!-- Для РР оставлен вариант статичной до 1440px. Переключаются по двойному клику на статичной карте или области контактов.
          И, наверное, логичней начинать с картинки, ибо интерактивная может и не понадобиться вовсе, к тому же сейчас карты и работают не всегда...-->
           <picture>
+            <source media="(min-width: 1300px)" srcset="img/webp/bg-map-desktop@1x.webp 1x, img/webp/bg-map-desktop@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 768px)" srcset="img/webp/bg-map-tablet@1x.webp 1x, img/webp/bg-map-tablet@2x.webp 2x" type="image/webp">
+            <source media="(max-width: 767px)" srcset="img/webp/bg-map-mobile@1x.webp 1x, img/webp/bg-map-mobile@2x.webp 2x" type="image/webp">
             <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
             <img class="map__image map__image--static map__image--show js js__link" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" id="id-map-image" alt="Наш адрес на карте: Санкт-Петербург, ул. б.Конюшенная, д.19/8" title="Для переключения на интерактивную карту - двойной щелчок по области с адресом или статичной карте">
@@ -209,14 +225,15 @@
     </div>
 
     <div class="footer__copyright copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Перейти на страницу интенсива 'Профессиональный HTML и CSS, уровень2'">HTML Academy</a>
-      <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" title="Перейти на страницу интенсива 'Профессиональный HTML и CSS, уровень2'">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Перейти на страницу интенсива 'Профессиональный HTML и CSS, уровень2'">
+        <p class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</p>
         <svg class="copyright__image" width="27" height="34"> <use xlink:href="img/sprite.svg#icon-academy"></use> </svg>
       </a>
     </div>
   </div>
 </footer>
 
+  <script src="js/lib/svg4everybody.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

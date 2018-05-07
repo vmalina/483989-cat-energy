@@ -4,11 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>HTML Academy: Кэт энерджи. Подбор программы</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>document.createElement("picture");</script>
+    <script src="js/lib/picturefill.js" async></script>
   </head>
   <body class="page inner-page">
-
+    <div style="display: none">
+    <include src="img/sprite.svg"></include>
+    </div>
     <h1 class="visually-hidden">Подбор программы Cat Energy</h1>
 
     <header class="header">
@@ -24,7 +29,7 @@
         </nav>
 
         <div class="header__wrapper">
-          <a class="header__logo logo" title="Логотип Cat Energy">
+          <a class="header__logo logo" href="index.html" title="Логотип Cat Energy. Перейти на главную.">
             <picture>
               <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -154,6 +159,9 @@
       <!-- Для РР оставлен вариант статичной до 1440px
         Переключаются по двойному клику. И, наверное, логичней начинать с картинки, ибо интерактивная может и не понадобиться вовсе...-->
       <picture>
+        <source media="(min-width: 1300px)" srcset="img/webp/bg-map-desktop@1x.webp 1x, img/webp/bg-map-desktop@2x.webp 2x" type="image/webp">
+        <source media="(min-width: 768px)" srcset="img/webp/bg-map-tablet@1x.webp 1x, img/webp/bg-map-tablet@2x.webp 2x" type="image/webp">
+        <source media="(max-width: 767px)" srcset="img/webp/bg-map-mobile@1x.webp 1x, img/webp/bg-map-mobile@2x.webp 2x" type="image/webp">
         <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
         <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
         <img class="map__image map__image--static map__image--show js js__link" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" id="id-map-image" alt="Наш адрес на карте: Санкт-Петербург, ул. б.Конюшенная, д.19/8" title="Для переключения на интерактивную карту - двойной щелчок по области с адресом или статичной карте">
@@ -167,7 +175,7 @@
     <footer class="footer">
       <div class="footer__layout layout">
 
-        <a class="footer__logo logo" title="Логотип Cat Energy">
+        <a class="footer__logo logo" href="index.html" title="Cat Energy. Перейти на главную">
           <img class="logo__text" src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
         </a>
 
@@ -193,7 +201,7 @@
             <li class="social__item">
               <a class="social__link social__link--fb" href="#" title="Facebook">
                 <span class="visually-hidden">Facebook</span>
-                <svg class="social__icon social__icon--fb"  width="20" height="20">
+                <svg class="social__icon social__icon--fb"  width="20" height="20" role="img">
                   <use xlink:href="img/sprite.svg#icon-fb"></use>
                 </svg>
               </a>
@@ -201,16 +209,20 @@
           </ul>
         </div>
 
-          <div class="footer__copyright copyright">
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Перейти на страницу интенсива 'Профессиональный HTML и CSS, уровень2'">HTML Academy</a>
-            <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" title="Перейти на страницу интенсива 'Профессиональный HTML и CSS, уровень2'">
-              <svg class="copyright__image" width="27" height="34"> <use xlink:href="img/sprite.svg#icon-academy"></use> </svg>
-            </a>
-          </div>
+        <div class="footer__copyright copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Перейти на страницу интенсива 'Профессиональный HTML и CSS, уровень2'">
+            <p class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</p>
+            <svg class="copyright__image" width="27" height="34">
+              <use xlink:href="img/sprite.svg#icon-academy"></use>
+            </svg>
+          </a>
+        </div>
 
         </div>
       </footer>
 
-    <script src="js/script.js"></script>
+
+    <script src="js/lib/svg4everybody.js"></script>
+    <script defer src="js/script.js"></script>
 </body>
 </html>
