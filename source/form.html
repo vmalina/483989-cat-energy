@@ -11,15 +11,17 @@
     <script src="js/lib/picturefill.js" async></script>
   </head>
   <body class="page inner-page">
-    <div style="display: none">
-    <include src="img/sprite.svg"></include>
-    </div>
+
     <h1 class="visually-hidden">Подбор программы Cat Energy</h1>
 
     <header class="header">
 
       <div class="header__layout layout">
-
+        <!-- Классы, влияющие на отображение меню: header__navigation-closed, header__navigation-opened, header__navigation-nojs -->
+        <!-- Классы, переключающие вид кнопки
+        .header__navigation-opened + .header__wrapper > .header__toggle
+        .header__navigation-closed + .header__wrapper > .header__toggle -->
+        <!-- ПРИМЕЧАНИЕ: под одинарным дефисом в названии классов в данном комментарии следует понимать двойной дефис -->
         <nav class="header__navigation header__navigation--closed header__navigation--nojs">
           <ul class="header__menu menu">
             <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
@@ -33,7 +35,7 @@
             <picture>
               <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img class="logo__img" src="img/logo-mobile.svg" width="190" height="38"  alt="Cat Energy" title="Логотип Cat Energy">
+              <img class="logo__img" src="img/logo-mobile.svg" width="190" height="38" alt="Cat Energy" title="Логотип Cat Energy">
             </picture>
           </a>
           <button class="header__toggle" type="button" id="id-toggle" title="Управление меню"><span class="visually-hidden">Управление меню</span></button>
@@ -59,7 +61,7 @@
           </div>
           <div class="form__field field">
             <label class="field__label" for="id-cat-age">Возраст (лет):</label>
-            <input class="field__input field__input--simple field__input--number" type="text"  type="text" pattern="\b[0-9]{2}|\b[0-9]{1}"  maxlength="2" id="id-cat-age" name="cat-age"  placeholder="7" title="Возраст кота (в годах).  Число от 0 до 99.">
+            <input class="field__input field__input--simple field__input--number" type="text" pattern="\b[0-9]{2}|\b[0-9]{1}"  maxlength="2" id="id-cat-age" name="cat-age"  placeholder="7" title="Возраст кота (в годах).  Число от 0 до 99.">
           </div>
         </div>
 
@@ -211,7 +213,7 @@
 
         <div class="footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Перейти на страницу интенсива 'Профессиональный HTML и CSS, уровень2'">
-            <p class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</p>
+            <p class="copyright__logo">HTML Academy</p>
             <svg class="copyright__image" width="27" height="34">
               <use xlink:href="img/sprite.svg#icon-academy"></use>
             </svg>

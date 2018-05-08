@@ -17,7 +17,11 @@
     <header class="header header--cat-pictured">
 
       <div class="header__layout layout layout--limited">
-
+        <!-- Классы, влияющие на отображение меню: header__navigation-closed, header__navigation-opened, header__navigation-nojs -->
+        <!-- Классы, переключающие вид кнопки
+        .header__navigation-opened + .header__wrapper > .header__toggle
+        .header__navigation-closed + .header__wrapper > .header__toggle -->
+        <!-- ПРИМЕЧАНИЕ: под одинарным дефисом в названии классов в данном комментарии следует понимать двойной дефис -->
         <nav class="header__navigation header__navigation--closed header__navigation--nojs">
           <ul class="header__menu menu">
             <li class="menu__item"><a class="menu__link menu__link--current">Главная</a></li>
@@ -65,14 +69,12 @@
     <section class="programs layout">
       <h2 class="programs__title visually-hidden">Популярные программы питания</h2>
       <ul class="programs__list">
-        <li class="programs__list-item program">
-          <i class="program__icon program__icon--losing"><span class="visually-hidden">Изображение кота</span></i>
+        <li class="programs__list-item program program--losing">
           <h3 class="program__title">Похудение</h3>
           <p class="program__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a class="program__link btn btn--arrowed" href="catalog.html" title="Перейти к каталогу SLIM">Каталог Slim</a>
         </li>
-        <li class="programs__list-item program">
-          <i class="program__icon program__icon--gathering"><span class="visually-hidden">Изображение тигра</span></i>
+        <li class="programs__list-item program program--gathering">
           <h3 class="program__title">Набор массы</h3>
           <p class="program__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
           <a class="program__link btn btn--arrowed" href="catalog.html" title="Перейти к каталогу PRO">Каталог Pro</a>
@@ -125,10 +127,9 @@
           <div class="slider__wrapper" id="id-slider-wrapper">
             <div class="slider__slide slider__slide--before">
               <picture>
-                <!-- Кота отвратно сжало, а он должен быть красив. И еще есть моментик с этим форматом применительно к слайдеру... -->
-                <!-- <source media="(min-width: 1300px)" srcset="img/webp/before-desktop@1x.webp 1x, img/webp/before-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 1300px)" srcset="img/webp/before-desktop@1x.webp 1x, img/webp/before-desktop@2x.webp 2x" type="image/webp">
                 <source media="(min-width: 768px)" srcset="img/webp/before-tablet@1x.webp 1x, img/webp/before-tablet@2x.webp 2x" type="image/webp">
-                <source media="(max-width: 767px)" srcset="img/webp/before-mobile@1x.webp 1x, img/webp/before-mobile@2x.webp 2x" type="image/webp"> -->
+                <source media="(max-width: 767px)" srcset="img/webp/before-mobile@1x.webp 1x, img/webp/before-mobile@2x.webp 2x" type="image/webp">
                 <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
                 <img class="slider__image slider__image--before" src="img/before-mobile@1x.png"  srcset="img/before-mobile@2x.png 2x" alt="Фото До">
@@ -136,9 +137,9 @@
             </div>
             <div class="slider__slide slider__slide--after">
               <picture>
-                <!-- <source media="(min-width: 1300px)" srcset="img/webp/after-desktop@1x.webp 1x, img/webp/after-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 1300px)" srcset="img/webp/after-desktop@1x.webp 1x, img/webp/after-desktop@2x.webp 2x" type="image/webp">
                 <source media="(min-width: 768px)" srcset="img/webp/after-tablet@1x.webp 1x, img/webp/after-tablet@2x.webp 2x" type="image/webp">
-                <source media="(max-width: 767px)" srcset="img/webp/after-mobile@1x.webp 1x, img/webp/after-mobile@2x.webp 2x" type="image/webp"> -->
+                <source media="(max-width: 767px)" srcset="img/webp/after-mobile@1x.webp 1x, img/webp/after-mobile@2x.webp 2x" type="image/webp">
                 <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
                 <img class="slider__image slider__image--after" src="img/after-mobile@1x.png"  srcset="img/after-mobile@2x.png 2x" alt="Фото После">
@@ -226,7 +227,7 @@
 
     <div class="footer__copyright copyright">
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Перейти на страницу интенсива 'Профессиональный HTML и CSS, уровень2'">
-        <p class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</p>
+        <p class="copyright__logo">HTML Academy</p>
         <svg class="copyright__image" width="27" height="34"> <use xlink:href="img/sprite.svg#icon-academy"></use> </svg>
       </a>
     </div>
