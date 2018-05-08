@@ -37,8 +37,8 @@
     flex-direction: row;
     justify-content: space-between;
     min-height: 150px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 32px;
   }
 
   .footer__logo {
@@ -62,5 +62,9 @@
 
   .footer__copyright {
     width: auto;
+
+    &::before {
+      display: none;
+    }
   }
 }

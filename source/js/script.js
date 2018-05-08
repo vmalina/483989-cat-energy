@@ -42,7 +42,7 @@ function viewMix() {
     var size=wrapper.clientWidth;
     wrapper.children[0].style.width=''+Math.floor(size/2)+'px';
     wrapper.children[1].style.width=''+Math.floor(size/2)+'px';
-    wrapper.children[1].children[0].children[2].style.left='-'+Math.floor(size/2)+'px';
+    wrapper.children[1].children[0].lastElementChild.style.left='-'+Math.floor(size/2)+'px';
     //ад, но когда этот код был написан, picture еще не было... :-)
   }
 }
@@ -62,7 +62,7 @@ function viewAfter() {
     var size=wrapper.clientWidth;
     wrapper.children[0].style.width='0';
     wrapper.children[1].style.width=''+size+'px';
-    wrapper.children[1].children[0].children[2].style.left='0';
+    wrapper.children[1].children[0].lastElementChild.style.left='0';
   }
 }
 

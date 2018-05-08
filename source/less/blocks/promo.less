@@ -1,26 +1,28 @@
-//это очень странная конструкция с фонами, но зато при любом переполнении белый шрифт останется на зеленом фоне.
 .promo {
   margin: 0;
   padding: 0;
-  padding-top: 27px;
   font-family: @oswaldfont;
   text-align: center;
   color: @basewhite;
-  background-color: @basewhite;
-  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-color: @hovergreen;
+  background-image: url("../img/index-background-mobile@1x.jpg"), linear-gradient(to bottom, @hovergreen 0%, @hovergreen 305px, @basewhite 305px, @basewhite 100%);
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: @mobilewidth 305px;
+  background-size: @mobilewidth 305px, auto;
   position: relative;
+  /*На случай, если нужно обеспечить растягивание зеленого фона на весь вьюпорт мобильника*/
+  .gradient-back(@hovergreen, @basewhite, 305px);
 }
 
 .promo__top {
   z-index: 1;
-  background-color: @basegreen;
-  background-image: linear-gradient(to bottom, transparent 0%, transparent 305px, @hovergreen 305px, @hovergreen 100%), url("../img/index-background-mobile@1x.jpg");
+  padding-top: 27px;
+  background-image: linear-gradient(to bottom, transparent 0%, transparent 305px, @hovergreen 305px, @hovergreen 100%);
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: auto, @mobilewidth 305px;
+  background-size: auto;
+  /*На случай, если нужно обеспечить растягивание зеленого фона на весь вьюпорт мобильника*/
+  .total-back(@hovergreen);
 }
 
 .promo__title {
@@ -33,9 +35,7 @@
 
 .promo__slogan {
   margin: 0;
-  margin-top: 26px;
-  margin-bottom: 28px;
-  padding: 0;
+  padding: 26px 0 28px;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
@@ -65,6 +65,11 @@
     padding-bottom: 530px;
     display: flex;
     flex-direction: column;
+    /*На случай, если нужно обеспечить растягивание зеленого фона на весь вьюпорт мобильника*/
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 
   .promo__top {
@@ -75,6 +80,12 @@
     background-color: transparent;
     background-image: none;
     margin-left: 46px;
+    padding-top: 0;
+    /*На случай, если нужно обеспечить растягивание зеленого фона на весь вьюпорт мобильника*/
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 
   .promo__title {
@@ -86,6 +97,7 @@
     font-size: 20px;
     line-height: 20px;
     margin-top: 42px;
+    padding-top: 0;
   }
 
   .promo__image {
@@ -109,7 +121,6 @@
   }
 }
 
-
 @media (min-width: @desktopwidth) {
   .promo {
     position: relative;
@@ -121,11 +132,12 @@
   .promo__top {
     margin-top: 52px;
     margin-left: 40px;
+    padding: 0;
   }
 
   .promo__slogan {
     margin-top: 40px;
-    margin-bottom: 53px;
+    margin-bottom: 26px;
   }
 
   .promo__link {
