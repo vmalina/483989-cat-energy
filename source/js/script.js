@@ -51,10 +51,10 @@ if (!(navMain === null)  && !(navToggle === null))  {
 
 // карта -----------------------------------------------
 function toggleMaps(mapIFrame, mapImg) {
- mapIFrame.classList.toggle('map__image--hide');
- mapIFrame.classList.toggle('map__image--show');
- mapImg.classList.toggle('map__image--hide');
- mapImg.classList.toggle('map__image--show');
+  mapIFrame.classList.toggle('map__image--hide');
+  mapIFrame.classList.toggle('map__image--show');
+  mapImg.classList.toggle('map__image--hide');
+  mapImg.classList.toggle('map__image--show');
 }
 
 var mapIFrame = document.getElementById('id-map-iframe');
