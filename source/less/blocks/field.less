@@ -22,6 +22,7 @@
   margin: auto 0;
   right: 20px;
   color: @darkgrey;
+  fill: @darkgrey;
   z-index: 2;
 }
 
@@ -55,10 +56,12 @@
 
 .field__input--iconed:focus + .field__icon {
   color: @basegreen;
+  fill: @basegreen;
 }
 
-.field__input--iconed:invalid + .field__icon {
-  color: red;
+.field__input--iconed:invalid  .field__icon {
+  color: @basered;
+  fill: @basered;
 }
 
 

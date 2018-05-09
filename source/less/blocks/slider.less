@@ -44,6 +44,33 @@
   }
 }
 
+.slider__slide--none {
+  width: 0;
+}
+
+.slider__slide--full {
+  width: 100%;
+}
+
+.slider__slide--full .slider__image--after {
+  left: 0;
+}
+
+.slider__slide--half {
+  width: 50%;
+  right: auto;
+}
+
+.slider__slide--half.slider__slide--after {
+  left: 50%;
+  right: 0;
+  width: 50%;
+}
+
+.slider__slide--half  .slider__image--after {
+  left: -160px;
+}
+
 .slider__image {
   position: absolute;
   top: 0;
@@ -108,20 +135,30 @@
     height: 517px;
     width: 100%;
 
-    &--before {
-      right: auto;
-      width: 50%;
+    &--full {
+      width: 100%;
     }
 
-    &--after {
-      right: 0;
+    &--none {
+      width: 0;
+    }
+
+    &--half {
       width: 50%;
+      right: auto;
     }
   }
 
-  .slider__image--after {
+  .slider__slide--half.slider__slide--after {
+    left: 50%;
+    right: 0;
+    width: 50%;
+  }
+
+  .slider__slide--half .slider__image--after {
     left: -345px;
   }
+
 
   .slider__controls {
     padding: 0;
@@ -144,7 +181,6 @@
     position: relative;
   }
 
-  // частичное дублирование кода для предотвращения трансгрессии и расщепления котика... это нужно.
   .slider__wrapper {
     height: 517px;
     width: 690px;
@@ -152,25 +188,6 @@
     bottom: 135px;
     right: -40px;
     left: auto;
-  }
-
-  .slider__slide {
-    height: 517px;
-    width: 100%;
-
-    &--before {
-      right: auto;
-      width: 50%;
-    }
-
-    &--after {
-      right: 0;
-      width: 50%;
-    }
-  }
-
-  .slider__image--after {
-    left: -345px;
   }
 
   .slider__controls {
