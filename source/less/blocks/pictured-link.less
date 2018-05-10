@@ -2,9 +2,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 280px;
   min-height: 289px;
+  .fix-IE-bug(104px);
   padding: 64px 40px 42px;
   background-color: @hovergreen;
   color: @basewhite;
@@ -24,43 +24,47 @@
     opacity: 0.6;
   }
 
-  &::before {
-    content: "";
-    display: block;
-    margin: 0 auto;
-    width: 55px;
-    height: 60px;
-    background-position: center;
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-image: url("../img/icon-gift.svg");
+  @media (max-width: @mobilewidthonly) and (min-resolution: @retinadpi), (max-width: @mobilewidthonly) and (min-resolution: retinadppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
   }
+}
+
+.pictured-link::after {
+  content: "";
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+  width: 55px;
+  height: 60px;
+  margin: 0 auto;
+  background-image: url("../img/icon-gift.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
 }
 
 .pictured-link__text {
   width: 150px;
-  margin: 0 auto;
-  margin-top: 60px; /*для ИЕ*/
+  margin: auto auto 0;
   font-family: @arialfont;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
 }
 
-@media (max-width: @mobilewidthonly) and (min-resolution: @retinadpi), (max-width: @mobilewidthonly) and (min-resolution: retinadppx) {
-  background-image: url("../img/gift-photo-mobile@2x.jpg");
-}
 
 @media (min-width: @tabletwidth) {
   .pictured-link {
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    padding: 40px 0;
+    padding: 70px 40px;
     width: 100%;
     min-height: 200px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     background-size: 708px 200px;
+
+    .fix-IE-bug(60px);
 
     @media (min-resolution: @retinadpi), (min-resolution: @retinadppx) {
       background-image: url("../img/gift-photo-tablet@2x.jpg");
@@ -68,21 +72,22 @@
     }
   }
 
-  .pictured-link::before {
-    position: relative;
-    top: -5px;
-    left: -33px;
+  .pictured-link::after {
+    position: absolute;
+    left: 90px;
+    right: auto;
     width: 55px;
     height: 60px;
     background-size: 55px 60px;
-    margin: auto;
+    margin: auto 0;
   }
 
   .pictured-link__text {
-    margin: auto;
-    margin-top: 30px; /*для ИЕ*/
     text-align: left;
+    max-width: auto;
     min-width: 161px;
+    margin-right: 84px;
+    margin-left: auto;
   }
 }
 
@@ -91,6 +96,8 @@
   .pictured-link {
     width: 245px;
     min-height: 289px;
+    padding: 40px;
+    .fix-IE-bug(103px);
     flex-direction: column;
     justify-content: space-between;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
@@ -102,16 +109,15 @@
     }
   }
 
-  .pictured-link::before {
-    top: 10px;
+  .pictured-link::after {
+    top: 64px;
     left: 0;
     right: 0;
+    margin: 0 auto;
   }
 
   .pictured-link__text {
     text-align: center;
-    margin: 0 auto;
-    margin-top: 60px; /*для ИЕ*/
-    padding-bottom: 4px;
+    margin: auto auto 0;
   }
 }
