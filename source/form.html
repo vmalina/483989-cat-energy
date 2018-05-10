@@ -6,11 +6,17 @@
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>HTML Academy: Кэт энерджи. Подбор программы</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+    <link rel="stylesheet" href="css/style-min.css">
     <script>document.createElement("picture");</script>
-    <script src="js/lib/picturefill.js" async></script>
+    <script src="js/lib/picturefill-min.js" async></script>
   </head>
   <body class="page inner-page">
+
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
 
     <h1 class="visually-hidden">Подбор программы Cat Energy</h1>
 
@@ -148,7 +154,7 @@
 
     <section class="map">
       <h2 class="visually-hidden">Наш адрес, интерактивная и статичная карты</h2>
-      <section class="map__contacts contacts contacts--grey js js__link">
+      <section class="map__contacts contacts contacts--grey js js__link" title="Для переключения между интерактивной и статичной картой - двойной щелчок по области с адресом или статичной карте">
         <h2 class="visually-hidden">Адрес нашей компании</h2>
         <div class="contacts__layout layout">
           <div class="contacts__wrapper">
@@ -166,9 +172,9 @@
         <source media="(max-width: 767px)" srcset="img/webp/bg-map-mobile@1x.webp 1x, img/webp/bg-map-mobile@2x.webp 2x" type="image/webp">
         <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
         <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-        <img class="map__image map__image--static map__image--hide js js__link" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" id="id-map-image" alt="Наш адрес на карте: Санкт-Петербург, ул. б.Конюшенная, д.19/8" title="Для переключения на интерактивную карту - двойной щелчок по области с адресом или статичной карте">
+        <img class="map__image map__image--static map__image--show js js__link" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" id="id-map-image" alt="Наш адрес на карте: Санкт-Петербург, ул. б.Конюшенная, д.19/8" title="Для переключения на интерактивную карту - двойной щелчок по области с адресом или статичной карте">
       </picture>
-      <iframe  class="map__image map__image--iframe map__image--show" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" id="id-map-iframe"  title="Для переключения к статичной карте - двойной щелчок по области с адресом" allowfullscreen></iframe>
+      <iframe  class="map__image map__image--iframe map__image--hide map__image--nojs" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" id="id-map-iframe"  title="Для переключения к статичной карте - двойной щелчок по области с адресом" allowfullscreen></iframe>
     </section>
 
 
@@ -188,7 +194,7 @@
               <a class="social__link social__link--vk" href="#" title="В контакте">
                 <span class="visually-hidden">В контакте</span>
                 <svg  class="social__icon social__icon--vk"  width="20" height="20">
-                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                  <use xlink:href="#icon-vk"></use>
                 </svg>
               </a>
             </li>
@@ -196,7 +202,7 @@
               <a class="social__link social__link--in" href="#" title="Instagram">
                 <span class="visually-hidden">Instagram</span>
                 <svg class="social__icon social__icon--in"  width="20" height="20">
-                  <use xlink:href="img/sprite.svg#icon-in"></use>
+                  <use xlink:href="#icon-in"></use>
                 </svg>
               </a>
             </li>
@@ -204,7 +210,7 @@
               <a class="social__link social__link--fb" href="#" title="Facebook">
                 <span class="visually-hidden">Facebook</span>
                 <svg class="social__icon social__icon--fb"  width="20" height="20" role="img">
-                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                  <use xlink:href="#icon-fb"></use>
                 </svg>
               </a>
             </li>
@@ -215,7 +221,7 @@
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Перейти на страницу интенсива 'Профессиональный HTML и CSS, уровень2'">
             <p class="copyright__logo">HTML Academy</p>
             <svg class="copyright__image" width="27" height="34">
-              <use xlink:href="img/sprite.svg#icon-academy"></use>
+              <use xlink:href="#icon-academy"></use>
             </svg>
           </a>
         </div>
@@ -224,7 +230,7 @@
       </footer>
 
 
-    <script src="js/lib/svg4everybody.js"></script>
-    <script defer src="js/script.js"></script>
+    <!-- <script src="js/lib/svg4everybody-min.js"></script> -->
+    <script defer src="js/script-min.js"></script>
 </body>
 </html>
