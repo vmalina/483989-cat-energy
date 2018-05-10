@@ -37,8 +37,9 @@
     flex-direction: row;
     justify-content: space-between;
     min-height: 150px;
+    .fix-IE-bug(110px);
     padding-top: 20px;
-    padding-bottom: 32px;
+    padding-bottom: 20px;
   }
 
   .footer__logo {
@@ -50,7 +51,11 @@
   }
 
   .footer__social {
-    width: 33.33%;
+    width: 33%;
+    flex-grow: 10;
+    flex-shrink: 0;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 2%;
 
     &::before,
@@ -62,6 +67,7 @@
 
   .footer__copyright {
     width: auto;
+    margin-left: auto;
 
     &::before {
       display: none;

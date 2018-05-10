@@ -18,7 +18,6 @@ var include = require("posthtml-include");
 var run = require('gulp-run-sequence');
 
 var uglify = require('gulp-uglify');
-var cheerio = require('cheerio');
 
 gulp.task("style", function() {
   gulp.src("source/less/style.less")
