@@ -18,7 +18,6 @@ var include = require("posthtml-include");
 var run = require('gulp-run-sequence');
 
 var uglify = require('gulp-uglify');
-var cheerio = require('cheerio');
 
 gulp.task("style", function() {
   gulp.src("source/less/style.less")
@@ -37,7 +36,8 @@ gulp.task("serve",  function () {
     server: "build/"
   });
   gulp.watch("source/less/**/*.less", ["style"]);
-  gulp.watch("build/*.html", ["html"]).on("change", server.reload);
+  gulp.watch("source/js/*.js", ["js"]).on("change", server.reload);
+  gulp.watch("source/*.html", ["html"]).on("change", server.reload);
 });
 
 //========================================================
